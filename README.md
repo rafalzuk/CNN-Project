@@ -2,11 +2,10 @@
 The project uses Bayesian Optimisation to tune 8 hyperparameters of a Convolutional Neural Network, which is used for brain MRI classification among 4 classes glioma, meningioma, notumor, pituitary. Fully trained model obtains overall 96% accuracy.
 
 ## NON-TECHNICAL EXPLANATION OF YOUR PROJECT
-The project uses Bayesian Optimisation (BO) and Convolutional Neuronal Networks (CNN), to classify brain MRI scans. With over 95% accuracy, it can distinguish between scans depicting: glioma, meningioma, no tumor, pituarity. Utilisation of such techniques in critical medical fields can an accelerate and improve the accuracy of diagnosis, and assist doctors with their assessment.  
+The project uses Bayesian Optimisation (BO) and Convolutional Neuronal Networks (CNN), to classify brain MRI scans. With over 96% accuracy, it can distinguish between scans depicting: glioma, meningioma, no tumor, pituarity. Utilisation of such techniques in critical medical fields can an accelerate and improve the accuracy of diagnosis, and assist doctors with their assessment, particularly in areas with limited health care.
 
 ## DATA
-10.34740/kaggle/dsv/2645886
-The data used in the model is a set of approximately 6000 training and 1200 testing images of various brain MRI scans, in various conditions, moslty with tumors. The data has been downlaoded from https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset. 
+The data used in the model is a set of approximately 6000 training and 1200 testing images of various brain MRI scans, in various conditions, moslty with tumors. The data has been downlaoded from https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset. [10.34740/kaggle/dsv/2645886]
 
 ## MODEL 
 The model used for this task is a CNN, made up of 3 convolutional layers and 2 fully connected layers, with approx. 500,000 parameters. CNN model has been chosen becuase of it good capabilities to analyse images and infer patterns. 
