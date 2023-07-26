@@ -33,4 +33,4 @@ b) hyperparameters optimised with Bayesian Optimisation:
 - neurons in fully connected layer 2
 
 ## RESULTS
-The fully trained model incorporating the optimised hyperparameters, obtains overall 96% accuracy in distinguishing between the 4 types of brain conditions, with even 99 % accuracy in classes such as no-tumor. The lower accuracy of about 94%, is obtained in distinsguishing between the meningioma and glioma, which are the most frequently confused in this study, due to their strong visual similarity in certain projections (particularly in images from top).
+The fully trained model incorporating the optimised hyperparameters, obtains overall 96% accuracy in distinguishing between the 4 types of brain conditions, with even 99 % accuracy in classes such as no-tumor. The lower accuracy of about 94% is obtained in distinsguishing between the meningioma and glioma, which are the most frequently confused tumors in this study, due to their strong visual similarity in certain projections (particularly in images from top).
