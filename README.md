@@ -8,7 +8,7 @@ The project uses Bayesian Optimisation (BO) and Convolutional Neuronal Networks 
 The dataset used in this project consists of approximately 6000 training and 1200 testing images (in black and white) of various brain MRI scans, in various conditions, mostly with tumors. The dataset has been downlaoded from https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset [10.34740/kaggle/dsv/2645886]. A subset of the available data (1800 training & 400 testing images) has been pre-processed and used for BO optimisation to speed it up, while for final training a larger subset, also pre-processed (4800 training and 1200 testing images) was used to obtain higher accuracy.
 
 ## MODEL 
-The model used for this task is a CNN, made up of 3 convolutional layers and 3 fully connected layers (including output) with approx. 500,000 parameters. CNN model has been chosen for this task becuase of it good capabilities to analyse images and infer complex patterns. 
+The model used for this task is a CNN, made up of 3 convolutional layers and 3 fully connected layers (including output) with approx. 500,000 parameters. CNN model has been chosen for this task becuase of it good capabilities to analyse images and infer complex patterns. The model contains such transformations as: pooling, ReLu function, batch normalisation, dropout.
 
 ## HYPERPARAMETER OPTIMSATION
 The project contains several hyperparameters, some of them were tuned manually by iterative observations with use of knowledge and good judgement, while some using BO optimisation. The total number of all hyperparameters was too large to use BO for all of them.
