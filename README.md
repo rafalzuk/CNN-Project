@@ -1,5 +1,5 @@
 # CNN-Project
-The CNN-Project is a learnig project developed for educational purposes within the realm of ML and AI. It utilised Bayesian Optimisation to tune 8 hyperparameters of a Convolutional Neural Network, which is used for brain MRI classification among 4 classes: glioma, meningioma, notumor, pituitary. Fully trained model obtains overall 96% accuracy.
+The CNN-Project is a project developed for educational purposes within the realm of ML and AI. It utilised Bayesian Optimisation to tune 8 hyperparameters of a Convolutional Neural Network, which is used for brain MRI classification among 4 classes: glioma, meningioma, notumor, pituitary. Fully trained model obtains overall 96% accuracy.
 
 ## NON-TECHNICAL EXPLANATION OF YOUR PROJECT
 The project uses Bayesian Optimisation (BO) and Convolutional Neuronal Networks (CNN), to classify brain MRI scans. With over 96% accuracy, it can distinguish between scans depicting: glioma, meningioma, no tumor, pituarity. Utilisation of such techniques in critical medical fields can an accelerate and improve the accuracy of diagnosis, and assist doctors with their assessment, particularly in areas with limited health care.
