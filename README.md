@@ -5,7 +5,7 @@ The project uses Bayesian Optimisation to tune 8 hyperparameters of a Convolutio
 The project uses Bayesian Optimisation (BO) and Convolutional Neuronal Networks (CNN), to classify brain MRI scans. With over 96% accuracy, it can distinguish between scans depicting: glioma, meningioma, no tumor, pituarity. Utilisation of such techniques in critical medical fields can an accelerate and improve the accuracy of diagnosis, and assist doctors with their assessment, particularly in areas with limited health care.
 
 ## DATA
-The data used in the model is a set of approximately 6000 training and 1200 testing images of various brain MRI scans, in various conditions, moslty with tumors. The data has been downlaoded from https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset. [10.34740/kaggle/dsv/2645886]
+The data used in the model is a set of approximately 6000 training and 1200 testing images of various brain MRI scans, in various conditions, moslty with tumors. The data has been downlaoded from https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset. [10.34740/kaggle/dsv/2645886]. A subset of the available data (1800 traing & 400 testing images) has been preprocessed and used for BO optimisation for speed it up, while for final training a larger subset, also pre-processed (4800 training and 1200 testing images) was used to obtain higher accuracy.
 
 ## MODEL 
 The model used for this task is a CNN, made up of 3 convolutional layers and 3 fully connected layers (including output) with approx. 500,000 parameters. CNN model has been chosen for this task becuase of it good capabilities to analyse images and infer complex patterns. 
@@ -33,4 +33,4 @@ b) hyperparameters optimised with Bayesian Optimisation:
 - neurons in fully connected layer 2
 
 ## RESULTS
-The fully trained model incorporating the optimised hyperparameters, obtains overall 96% accuracy in distinguishing between the 4 types of brain conditions (3 tumor types and 1 healthly state).
+The fully trained model incorporating the optimised hyperparameters, obtains overall 96% accuracy in distinguishing between the 4 types of brain conditions, with even 99 % accuracy in classes such as no-tumor.
