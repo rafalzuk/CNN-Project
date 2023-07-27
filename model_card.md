@@ -4,11 +4,12 @@ See the [example Google model cards](https://modelcards.withgoogle.com/model-rep
 
 ## Model Description
 
-**Input:** Describe the inputs of your model 
+**Input:** The input of the model is a 120x120 black and white image of a brain MRI scan.
 
-**Output:** Describe the output(s) of your model
+**Output:** The output of the model are 4 probabilities of the image belonging to each class of the following: glioma, meningioma, notumor, pituarity. The model returns the class that has the highest probability.
 
-**Model Architecture:** Describe the model architecture you’ve used
+**Model Architecture:** The model employs a CNN architecture with 3 convolutional layers:
+
 
 ## Performance
 
