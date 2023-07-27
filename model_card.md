@@ -9,12 +9,13 @@ See the [example Google model cards](https://modelcards.withgoogle.com/model-rep
 **Output:** The output of the model are 4 probabilities of the image belonging to each class of the following: glioma, meningioma, notumor, pituarity. The model returns the class that has the highest probability.
 
 **Model Architecture:** The model employs a CNN architecture with 3 convolutional layers, and 3 fully connected layers, as follows:
-1) ipnut > convolutional layer 1 > maxpooling > ReLu > batch normalization
-2) convolutional layer 2 > maxpooling > ReLu > batch normalization
-3) convolutional layer 3 > maxpooling > ReLu > batch normalization
-2) fully connected layer 1 > ReLu
-2) fully connected layer 2 > ReLu > droput
-2) fully connected layer 3 > output
+1) input >
+2) convolutional layer 1 > maxpooling > ReLu > batch normalization
+3) convolutional layer 2 > maxpooling > ReLu > batch normalization
+4) convolutional layer 3 > maxpooling > ReLu > batch normalization
+5) fully connected layer 1 > ReLu
+6) fully connected layer 2 > ReLu > droput
+7) fully connected layer 3 > output
 
 
 
