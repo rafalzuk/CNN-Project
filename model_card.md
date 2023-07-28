@@ -43,7 +43,7 @@ B) Final hyperparameters optimised with Bayesian Optimisation:
 
 ## Final Performance
 
-Final (full) training of the model was set to last 25 epochs and used the above parameters (which were obtained after tens of iterations of Bayesian Optimisation). The dataset used for full training was larger than before and consisted of: gliomna (1300 images), meningioma (1300 images), notumor (1100 images) and pituarity (1100 images). As before, the glioma and meningioma were sampled more profusely becuase they are harder to discern. The final testing set consisted of 1200 images, 300 of each class. The model achived the overall accuracy of 95% and individual accuracies of: glioma (93%), meningioma (93%), notumor (98%), pituarity (99%).
+Final (full) training of the model was set to last 25 epochs and used the above parameters. The dataset used for full training was larger than before and consisted of: gliomna (1300 images), meningioma (1300 images), notumor (1100 images) and pituarity (1100 images). As before, the glioma and meningioma were sampled more profusely becuase they are harder to discern. The final testing set consisted of 1200 images, 300 of each class. The model achived the overall accuracy of 95% and individual accuracies of: glioma (93%), meningioma (93%), notumor (98%), pituarity (99%).
 
 ## Limitations
 
