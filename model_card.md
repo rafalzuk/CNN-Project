@@ -47,7 +47,7 @@ Final (full) training of the model was set to last 25 epochs and used the above 
 
 ## Limitations
 
-The model is limited to predicting only 1 of the following four classes: glioma, meningioma, notumor, pituarity. Therefore, it would produce incomplete diagnosis in cases with several types of tumor, by predicting only the most probable one. Moreover, the model is best suited to capturing small to medium tumors, as larger ones may not be contextually captured. Orientation of the brain in the image may skew the prediction - the image should be either from the front or top, but that depends on the tumor type - gliomas and meningiomas could be confused with one another. 
+The model is limited to predicting only 1 of the following four classes: glioma, meningioma, notumor, pituarity. Therefore, it would produce incomplete diagnosis in cases with several types of tumor, by predicting only the most probable one. The model cannot detect other types of brain tumors of diseases. Moreover, the model is best suited to capturing small- to medium -sized tumors, as larger ones may not be contextually captured. Orientation of the brain in the image may skew the prediction - the image should best be either from the front or top, but that depends on the tumor type. Gliomas and meningiomas could be confused with one another in top projection, yet that also depends on the diversity of the training data, not just the model itself. Moreover, blurr, occlusion, oversaturation could reduce the prediction accuracy. At last, individual characteristics of the brain, depending on ethnicity or nature, may confuse the model, so the image tested should ideally belong to the same race as the majority of the images used for training.
 
 ## Trade-offs
 
