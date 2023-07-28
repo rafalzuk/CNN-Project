@@ -5,7 +5,7 @@
 
 **Input:** The input of the model is a 120x120 black and white image of a brain MRI scan.
 
-**Output:** The output of the model is a 4-dimensional vectors containing 4 probabilities of the image belonging to each class of the following: glioma, meningioma, notumor, pituarity. The model returns the class that has the highest probability.
+**Output:** The output of the model is a 4-dimensional vectors containing 4 probabilities of the image belonging to each class of the following: glioma, meningioma, notumor, pituarity. The model only shows and returns the class that has the highest probability.
 
 **Model Architecture:** The model employs a CNN architecture with 3 convolutional layers, and 3 fully connected layers, as follows:
 1) input layer (120x120 black & white image)
