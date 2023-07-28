@@ -20,26 +20,26 @@
 
 The model's performance was analysed on a subset of brain MRI images, consisting of 2000 training images and 400 test images, which where taken randomly from the original dataset of 7023 images, described in data_sheet.md. The training dataset contains 4 classes: gliomna (600 images), meningioma (600 images), notumor (400 images) and pituarity (400 images). Note that more training images were used for glioma and meningioma due to the their similarity and thus difficulty to tell apart. This set was used for training in 5 epochs. This reduced subset allowed for faster training and quicker comparison of metrics.
 
-The model's accuracy was assessed on a test subset, consisting of 400 images, 100 of each class. The performance was measured based on the overall accuracy, i.e. number of instances when the model correctly predicted the class. This metric was used during hyperparameter optimisiation and CNN architecure engineering. The overalla accuracy varied depending on the hyperparameters used, and achieved a peak of 90% at one of the training settings during Bayesian Optimisation. This corresponded to individual accuracies of: glioma (91%), meningioma (81%), notumor (91%), pituarity (97%). The individual accuracies of each class were seen to always be the highest for notumor and pituarity, which are visually the most distinct cases. The process of learning and training convergence has been exposed in the appended .ipynb workboook. Below is summarised a final parameters of the model (some of them  obtained with Bayesian Optimisation), which used in the final (full) training of the model.
+The model's accuracy was assessed on a test subset, consisting of 400 images, 100 of each class. The performance was measured based on the overall accuracy, i.e. number of instances when the model correctly predicted the class. This metric was used during hyperparameter optimisiation and CNN architecure engineering. The overalla accuracy varied depending on the hyperparameters used, and achieved a peak of 90% at one of the training settings during Bayesian Optimisation. This corresponded to individual accuracies of: glioma (91%), meningioma (81%), notumor (91%), pituarity (97%). The individual accuracies of each class were seen to always be the highest for notumor and pituarity, which are visually the most distinct cases. The process of learning and training convergence has been exposed in the appended .ipynb workboook. Below are summarised the final parameters of the model (some of which were obtained with Bayesian Optimisation), which used in the final (full) training of the model, described later.
 
-a) Hyperparameters that have been set by iterative manual testing and observations, reinforced with human understanding:
-batch size (set and fixed to 4)
-images resolutions (set and fixed at 120x120 pixels)
-number of convolutional layers (set and fixed at 3)
-number of fully connected layers (set and fixed at 3 including the output layer)
-pooling size (set and fixed at 2)
-number of epochs (during BO optimisation set to 5 for faster iterations, while for final training set to 25)
-dropout (during BO optimisation set to 0 to reduce stochasticity/irregularity of optimisation, while in final training set to 0.2)
+A) Hyperparameters that have been set by iterative manual testing and observations, reinforced with human understanding:
+1) batch size (set and fixed to 4)
+2) images resolutions (set and fixed at 120x120 pixels)
+3) number of convolutional layers (set and fixed at 3)
+4) number of fully connected layers (set and fixed at 3 including the output layer)
+5) pooling size (set and fixed at 2)
+6) number of epochs (during BO optimisation set to 5 for faster iterations, while for final training set to 25)
+7) dropout (during BO optimisation set to 0 to reduce stochasticity/irregularity of optimisation, while in final training set to 0.2)
 
-b) Final hyperparameters optimised with Bayesian Optimisation:
-convolutional layer 1, number of maps: 14
-convolutional layer 1, kernel size: 3x3
-convolutional layer 2, number of maps: 20
-convolutional layer 2, kernel size: 2x2
-convolutional layer 3, number of maps: 30
-convolutional layer 3, kernel size: 3x3
-neurons in fully connected layer 1: 116
-neurons in fully connected layer 2: 72
+B) Final hyperparameters optimised with Bayesian Optimisation:
+1) convolutional layer 1, number of maps: 14
+2) convolutional layer 1, kernel size: 3x3
+3) convolutional layer 2, number of maps: 20
+4) convolutional layer 2, kernel size: 2x2
+5) convolutional layer 3, number of maps: 30
+6) convolutional layer 3, kernel size: 3x3
+7) neurons in fully connected layer 1: 116
+8) neurons in fully connected layer 2: 72
 
 ## Final Performance
 
