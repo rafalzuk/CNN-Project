@@ -1,6 +1,5 @@
 # Model Card
 
-See the [example Google model cards](https://modelcards.withgoogle.com/model-reports) for inspiration. 
 
 ## Model Description
 
@@ -44,12 +43,12 @@ neurons in fully connected layer 2: 72
 
 ## Final Performance
 
-Final (full) training was set to last 25 epochs and the above parameters were used (which were obtained after tens of iterations of Bayesian Optimisation). The dataset used for full training was larger than before and consisted of: gliomna (1300 images), meningioma (1300 images), notumor (1100 images) and pituarity (1100 images). As before, the glioma and meningioma were sampled more profusely becuase they are harder to discern. The final testing set consisted of 1200 images, 300 of each class. The model achived the overall accuracy of 95% and individual accuracies of: glioma (93%), meningioma (93%), notumor (98%), pituarity (99%).
+Final (full) training of the model was set to last 25 epochs and used the above parameters (which were obtained after tens of iterations of Bayesian Optimisation). The dataset used for full training was larger than before and consisted of: gliomna (1300 images), meningioma (1300 images), notumor (1100 images) and pituarity (1100 images). As before, the glioma and meningioma were sampled more profusely becuase they are harder to discern. The final testing set consisted of 1200 images, 300 of each class. The model achived the overall accuracy of 95% and individual accuracies of: glioma (93%), meningioma (93%), notumor (98%), pituarity (99%).
 
 ## Limitations
 
-Outline the limitations of your model.
+The model is limited to predicting only 1 of the following four classes: glioma, meningioma, notumor, pituarity. Therefore, it would produce incomplete diagnosis in cases with several types of tumor, by predicting only the most probable one. Moreover, the model is best suited to capturing small to medium tumors, as larger ones may not be contextually captured. Orientation of the brain in the image may skew the prediction - the image should be either from the front or top, but that depends on the tumor type - gliomas and meningiomas could be confused with one another. 
 
 ## Trade-offs
 
-Outline any trade-offs of your model, such as any circumstances where the model exhibits performance issues. 
+The model was seen to underperform in images of glioma and meningioma, due to their complex visual nature. Lumps of tumor in these cases may appear similar and are characterised mainly by their relative positions with respect to the skull (meningioma typically closer to skull). Furthermore, performance issues amplifying this visual similarity may occur with MRI scans made from top, i.e. above the head. In this projection, meningioma, at the top of the skull may appear in the middle of the image, which could be confused with a glioma, which typically occurs inside the central parts of the brain, or in fact anywhere. Thus, the model may confuse these 2 tumors depending on their size and location, as well as image projection. Moreover, it was noted that very large lumps of tumor (spanning approximately over 30% of brain scans, may be misclassifeid as no tumor at all, implying that the model loses context with very large objects. At last, MRI image artifacts, like discoloration, may be confused for a tumor, even in cases of a healthy brain.
